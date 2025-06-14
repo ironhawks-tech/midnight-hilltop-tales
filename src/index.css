@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,54 +7,6 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
 
@@ -98,6 +51,49 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-midnight-900 text-moonlight-300 overflow-x-hidden;
+    background: linear-gradient(180deg, #0a0e27 0%, #1a1f3a 50%, #2a2f4a 100%);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .scene {
+    @apply min-h-screen flex items-center justify-center relative overflow-hidden;
+  }
+
+  .star {
+    @apply absolute w-2 h-2 bg-moonlight-300 rounded-full animate-twinkle;
+  }
+
+  .moon {
+    @apply absolute w-32 h-32 bg-gradient-radial from-moonlight-300 to-moonlight-500 rounded-full shadow-2xl;
+    box-shadow: 0 0 100px rgba(232, 244, 248, 0.5);
+  }
+
+  .dog-speech {
+    @apply bg-midnight-700/80 backdrop-blur-sm rounded-2xl px-6 py-4 border border-moonlight-300/20;
+  }
+
+  .typewriter {
+    @apply overflow-hidden whitespace-nowrap border-r-2 border-golden-500 animate-typewriter;
+  }
+
+  .magical-glow {
+    @apply shadow-2xl;
+    box-shadow: 0 0 50px rgba(255, 215, 0, 0.3);
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+
+  .bg-gradient-radial {
+    background: radial-gradient(circle, var(--tw-gradient-stops));
   }
 }

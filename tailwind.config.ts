@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,32 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				midnight: {
+					900: '#0a0e27',
+					800: '#1a1f3a',
+					700: '#2a2f4a',
+					600: '#3a405a',
+					500: '#4a506a',
+					400: '#6b7396',
+					300: '#8b91b3',
+					200: '#b0b6d4',
+					100: '#d6daed'
+				},
+				moonlight: {
+					500: '#e8f4f8',
+					400: '#f1f8fc',
+					300: '#f8fcff'
+				},
+				golden: {
+					500: '#ffd700',
+					400: '#ffe55c',
+					300: '#fff2a8'
 				}
+			},
+			fontFamily: {
+				dancing: ['Dancing Script', 'cursive'],
+				cinzel: ['Cinzel', 'serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +110,47 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'twinkle': {
+					'0%, 100%': { opacity: '0.3', transform: 'scale(0.8)' },
+					'50%': { opacity: '1', transform: 'scale(1.2)' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'wag': {
+					'0%, 100%': { transform: 'rotate(-5deg)' },
+					'50%': { transform: 'rotate(5deg)' }
+				},
+				'shooting-star': {
+					'0%': { transform: 'translateX(-100px) translateY(100px)', opacity: '0' },
+					'50%': { opacity: '1' },
+					'100%': { transform: 'translateX(300px) translateY(-100px)', opacity: '0' }
+				},
+				'typewriter': {
+					'0%': { width: '0' },
+					'100%': { width: '100%' }
+				},
+				'blink': {
+					'0%, 50%': { opacity: '1' },
+					'51%, 100%': { opacity: '0' }
+				},
+				'heartbeat': {
+					'0%, 100%': { transform: 'scale(1)' },
+					'50%': { transform: 'scale(1.05)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'twinkle': 'twinkle 3s ease-in-out infinite',
+				'float': 'float 6s ease-in-out infinite',
+				'wag': 'wag 0.8s ease-in-out infinite',
+				'shooting-star': 'shooting-star 3s linear infinite',
+				'typewriter': 'typewriter 3s steps(40) 1s forwards',
+				'blink': 'blink 1s step-end infinite',
+				'heartbeat': 'heartbeat 2s ease-in-out infinite'
 			}
 		}
 	},
