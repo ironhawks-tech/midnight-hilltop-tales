@@ -5,15 +5,17 @@ interface StorySceneProps {
   children: React.ReactNode;
   className?: string;
   background?: string;
+  id?: string;
 }
 
 const StoryScene: React.FC<StorySceneProps> = ({ 
   children, 
   className = '', 
-  background = '' 
+  background = '',
+  id
 }) => {
   return (
-    <section className={`scene ${className} ${background}`}>
+    <section id={id} className={`scene ${className} ${background}`}>
       {children}
     </section>
   );
